@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');   /*Nova Mono*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');  /*Bebas Neue*/
+
+/* For para */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
+
 *{
   padding: 0;
   margin: 0;
@@ -33,22 +40,25 @@ video{
 }
 
 .content_holder h1{
+  font-family: 'Bebas Neue', cursive;
+  /* font-family: 'Nova Mono', monospace; */
   color: white;
   text-align: center;
-  width: 60%;
-  font-size: 2.9rem;
+  width: 90%;
+  font-size: 3.9rem;
 }
 
 
 .content_holder p{
+  font-family: 'Montserrat', sans-serif;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .contents{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .content{
@@ -56,18 +66,45 @@ video{
   height:70%;
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px 0px;
+  gap: 30px 10px;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
   margin-left: 40px;
 }
 
+.right_content{
+  width: 40%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
 .tron img{
-  /* position: absolute;
-  top:0; */
-  display: inline-block;
-  width: 90%;
+  width: 400px;
+  height: 340px;
+  /* margin-top: -20px; */
+}
+
+.button{
+  margin-top: 30px;
+}
+
+.button button{
+  border: 1px solid red;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  background-color: #E82A2F;
+  border-radius: 10px;
+  cursor: pointer;
+  /* margin-top:10px; */
 }
 
 .content .box{
@@ -80,4 +117,16 @@ video{
   width: 270px;
   height: 200px;
   object-fit: cover;
+  
+}
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
+.bounce {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
